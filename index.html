@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbleeeee</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="bubble.css">
+</head>
+
+<body>
+
+    <div class="container" onclick="toggleMobileMenu(this)">
+        <div class="under-container bubble">
+            <div class="line">
+                <div class="square" id="square">B</div>
+                <div class="square">u</div>
+                <div class="square">b</div>
+                <div class="square">b</div>
+                <div class="square">l</div>
+                <div class="square">e</div>
+                <div class="square">e</div>
+                <div class="square">e</div>
+                <div class="square">e</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var square = document.getElementsByClassName('square');
+
+        for (var i = 0; i < square.length; i++) {
+            square[i].addEventListener('mouseenter', function () {
+                this.classList.add("rubberBand");
+                this.addEventListener("animationend", function () {
+                    this.classList.remove("rubberBand");
+                }, false);
+            })
+        }
+    </script>
+</body>
+
+</html>
